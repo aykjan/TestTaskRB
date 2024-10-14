@@ -1,0 +1,42 @@
+.video {
+    min-height: 645px;
+
+    &__wrapper {
+        position: relative;
+        width: 1200px;
+        height: 517px;
+        margin: 0 auto;
+        background-color: purple;
+        background: url(../../images/video/video_preview.jpeg) center (center/cover) no-repeat;
+    }
+
+    &__button {
+        position: absolute;
+        width: 180px;
+        height: 33px;
+        top: 47%;
+        left: 50%;
+        transform: translateX(-50%);
+        clip-path: polygon(7% 0, 100% 0, 92% 100%, 0% 100%);
+        background: #18c576;
+        color: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* Центрирование содержимого кнопки */
+    }
+
+    &__text {
+        margin-right: 10px; /* Отступ между текстом и иконкой */
+        margin-bottom: 1px;
+    }
+
+    &__icon {
+        i {
+            font-size: 19px; /* Размер иконки */
+            color: white; /* Цвет иконки */
+            vertical-align: middle; /* Выравнивание по центру с текстом */
+        }
+    }
+}
