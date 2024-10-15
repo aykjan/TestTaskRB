@@ -33,15 +33,25 @@ gulp.task('styles', function () {
 });
 
 // Минификация и объединение JS
+// Минификация и объединение JS
+// Минификация и сборка JS
 gulp.task('scripts', function () {
-    return gulp.src(paths.js)
+    return gulp.src('./src/js/main.js') // Только главный файл
         .pipe(sourcemaps.init()) // Инициализация sourcemaps
-        .pipe(concat('main.js')) // Объединение JS-файлов
         .pipe(uglify()) // Минификация JS
         .pipe(sourcemaps.write('.')) // Запись sourcemaps
         .pipe(gulp.dest('./dist/js')) // Выгрузка файлов в папку dist
         .pipe(bs.stream()); // Обновление браузера
 });
+
+// Копирование компонентов в папку dist
+gulp.task('copy-js-components', function () {
+    return gulp.src('./src/js/components/*.js') // Все компоненты
+        .pipe(gulp.dest('./dist/js/components')); // Копируем в dist
+});
+
+
+
 
 // Оптимизация изображений
 gulp.task('images', function () {
@@ -61,8 +71,16 @@ gulp.task('html', function () {
 gulp.task('serve', function () {
     bs.init({
         server: {
-            baseDir: './dist'
-        }
+            baseDir: './dist',
+            middleware: function (req, res, next) {
+                res.setHeader('Access-Control-Allow-Origin', '*'); // Разрешение CORS
+                res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
+                res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+                res.setHeader('Access-Control-Allow-Credentials', true); // Если требуется поддержка cookie
+                next();
+            }
+        },
+        https: true  // Включаем HTTPS
     });
 
     gulp.watch(paths.scss, gulp.series('styles'));
@@ -72,4 +90,5 @@ gulp.task('serve', function () {
 });
 
 // Задача по умолчанию (стартовая)
-gulp.task('default', gulp.series('styles', 'scripts', 'images', 'html', 'serve'));
+gulp.task('default', gulp.series('styles', 'scripts', 'copy-js-components', 'images', 'html', 'serve'));
+

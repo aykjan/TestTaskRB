@@ -3,20 +3,19 @@
 
     &__wrapper {
         position: relative;
-        width: 1200px;
-        height: 517px;
+        width: 1200px; /* Фиксированная ширина */
+        height: 517px; /* Фиксированная высота */
         margin: 0 auto;
-        background-color: purple;
-        background: url(../../images/video/video_preview.jpeg) center (center/cover) no-repeat;
+        background: url(../../images/video/video_preview.jpeg) center center/cover no-repeat;
     }
 
     &__button {
         position: absolute;
         width: 180px;
         height: 33px;
-        top: 47%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         clip-path: polygon(7% 0, 100% 0, 92% 100%, 0% 100%);
         background: #18c576;
         color: white;
@@ -24,19 +23,36 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        /* Центрирование содержимого кнопки */
+        cursor: pointer;
+        z-index: 2; /* Кнопка будет поверх видео */
     }
 
     &__text {
-        margin-right: 10px; /* Отступ между текстом и иконкой */
+        margin-right: 10px;
         margin-bottom: 1px;
     }
 
     &__icon {
         i {
-            font-size: 19px; /* Размер иконки */
-            color: white; /* Цвет иконки */
-            vertical-align: middle; /* Выравнивание по центру с текстом */
+            font-size: 19px;
+            color: white;
+            vertical-align: middle;
         }
+    }
+
+    &__player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none; /* Скрыто по умолчанию */
+        z-index: 1; /* Видео под кнопкой */
+    }
+
+    &__player iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 }

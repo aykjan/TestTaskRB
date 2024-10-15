@@ -15,15 +15,18 @@
         <!-- Секция видео -->
         <section class="video">
             <div class="video__wrapper">
-                <button class="video__button">
-                    <span class="video__text">Смотреть видео</span>
-                    <span class="video__icon">
-                        <i class="bi bi-play"></i>
-                    </span>
-                </button>
+              <button class="video__button">
+                <span class="video__text">Смотреть видео</span>
+                <span class="video__icon">
+                  <i class="bi bi-play"></i>
+                </span>
+              </button>
+              <!-- Видео теперь внутри video__wrapper -->
+              <div class="video__player" id="video-player"></div>
             </div>
-        </section>
-        
+          </section>
+          
+
 
 
         <!-- Секция товаров -->
@@ -45,6 +48,8 @@
         </section>
     </main>
 
+
+<script type="module" src="js/main.js"></script>
 </body>
 
 </html>
