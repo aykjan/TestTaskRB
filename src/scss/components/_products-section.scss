@@ -66,26 +66,9 @@
         gap: 5px;
     }
 
-    &__label {
-        padding: 5px 10px;
-        border-radius: 3px;
-        font-size: 12px;
-        color: white;
-
-        &--discount {
-            background-color: #ff4d4f;
-        }
-
-        &--day {
-            background-color: #18c576;
-        }
-
-        &--sale {
-            background-color: #ff69b4;
-        }
-
-        &--hit {
-            background-color: #915aff;
-        }
+    &__title {
+        font-size: 20px;
     }
+
+   
 }
