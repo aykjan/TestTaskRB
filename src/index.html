@@ -2,113 +2,135 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-    <main class="main-content">
-        <!-- Секция видео -->
-        <section class="video">
-            <div class="video__wrapper">
-                <button class="video__button">
-                    <span class="video__text">Смотреть видео</span>
-                    <span class="video__icon">
-                        <i class="bi bi-play"></i>
-                    </span>
-                </button>
-                <!-- Видео теперь внутри video__wrapper -->
-                <div class="video__player" id="video-player"></div>
-            </div>
-        </section>
+  <main class="main-content">
+    <!-- Секция видео -->
+    <section class="video">
+      <div class="video__wrapper">
+        <button class="video__button">
+          <span class="video__text">Смотреть видео</span>
+          <span class="video__icon">
+            <i class="bi bi-play"></i>
+          </span>
+        </button>
+        <!-- Видео теперь внутри video__wrapper -->
+        <div class="video__player" id="video-player"></div>
+      </div>
+    </section>
 
 
 
 
-        <!-- Секция товаров -->
-        <section class="products-section">
-          <!-- Контейнер для всех карточек на одной строке -->
-          <div class="products-section__row">
-            <!-- Полная карточка 1: Горох в стручках -->
-            <div class="product-card product-card--full">
-              <div class="product-card__image-wrapper">
-                <img src="images/products/peas.jpeg" alt="Горох в стручках, 1 кг" class="product-card__image product-card__image--full" />
-                <div class="product-card__labels">
-                  <h3 class="product-card__title text-white">Горох в стручках, 1 кг</h3>
-                  <span class="product-card__label product-card__label--discount product-card__label--discount-full">-29%</span>
-                  <span class="product-card__label product-card__label--day product-card__label--day-full">Товар дня</span>
-                  <p class="product-card__price">570 ₽</p>
-                  
-                  
-                </div>
+    <!-- Секция товаров -->
+    <section class="products-section">
+      <!-- Контейнер для всех карточек на одной строке -->
+      <div class="products-section__row">
+        <!-- Полная карточка 1: Горох в стручках -->
+        <div class="product-card product-card--full">
+          <div class="product-card__image-wrapper">
+
+            <div class="product-card__labels">
+              <h3 class="product-card__title text-white">Горох в стручках, 1 кг</h3>
+              <div class="product-card__label-container product-card__label-container--full">
+                <span
+                  class="product-card__label product-card__label--discount product-card__label--discount-full">-29%</span>
+                <span class="product-card__label product-card__label--day product-card__label--day-full">Товар
+                  дня</span>
               </div>
-            </div>
-        
-            <!-- Контейнер для широких карточек -->
-            <div class="products-section__wide">
-              <!-- Широкая карточка 1: Голубика лесная -->
-              <div class="product-card product-card--wide">
-                <div class="product-card__image-wrapper">
-                  <img src="images/products/blueberry.jpeg" alt="Голубика лесная, 200 г" class="product-card__image product-card__image--wide" />
-                  <div class="product-card__labels">
-                    <span class="product-card__label product-card__label--discount">-31%</span>
-                    <span class="product-card__label product-card__label--sale">Распродажа</span>
-                  </div>
-                </div>
+              <div class="product-card__price-container product-card__price-container--full">
+                <p class="product-card__price product-card__price--full">570 ₽</p>
+                <button class="button button--full">Оставить заявку</button>
               </div>
-          
-              <!-- Широкая карточка 2: Морковь мытая -->
-              <div class="product-card product-card--wide">
-                <div class="product-card__image-wrapper">
-                  <img src="images/products/carrots.jpeg" alt="Морковь мытая, 1 кг" class="product-card__image product-card__image--wide" />
-                  <div class="product-card__labels">
-                    <span class="product-card__label product-card__label--hit product-card__label--wide">Хит</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-        
-            <!-- Стандартная карточка 1: Попкорн солёный -->
-            <div class="product-card product-card--standard">
-              <div class="product-card__image-wrapper">
-                <img src="images/products/popcorn.jpeg" alt="Попкорн солёный, для СВЧ-печи, 120 г" class="product-card__image product-card__image--standard" />
-                <div class="product-card__labels">
-                  <span class="product-card__label product-card__label--discount">-29%</span>
-                  <span class="product-card__label product-card__label--day">Товар дня</span>
-                </div>
-              </div>
-              <h3 class="product-card__title">Попкорн солёный, для СВЧ-печи, 120 г</h3>
-              <p class="product-card__price">160 ₽</p>
-            </div>
-        
-            <!-- Стандартная карточка 2: Эскимо с малиной -->
-            <div class="product-card product-card--standard">
-              <div class="product-card__image-wrapper">
-                <img src="images/products/iceCream.jpeg" alt="Эскимо с малиной, 150 г" class="product-card__image product-card__image--standard" />
-                <div class="product-card__labels">
-                  <span class="product-card__label product-card__label--hit product-card__label--standard">Хит</span>
-                </div>
-              </div>
-              <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
-              <p class="product-card__price">190 ₽</p>
+
+
             </div>
           </div>
-        </section>
-        
-        
-        
-        
-        
-        
-        
-    </main>
+        </div>
+
+        <!-- Контейнер для широких карточек -->
+        <div class="products-section__wide">
+          <!-- Широкая карточка 1: Голубика лесная -->
+          <div class="product-card product-card--wide">
+            <div class="product-card__image-wrapper--wide-one">
+
+              <div class="product-card__labels">
+                <h3 class="product-card__title text-white">Голубика лесная, 200 г</h3>
+                <div class="product-card__label-container product-card__label-container--wide">
+                  <span class="product-card__label product-card__label--discount product-card__label--discount-wide">-31%</span>
+                  <span class="product-card__label product-card__label--sale product-card__label--sale-wide">Распродажа</span>
+                </div>
+                <div class="product-card__price-container product-card__price-container--wide">
+                  <p class="product-card__price product-card__price--wide-one">140 ₽</p>
+                  <button class="button button--wide-one">Оставить заявку</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Широкая карточка 2: Морковь мытая -->
+          <div class="product-card product-card--wide">
+            <div class="product-card__image-wrapper--wide-two">
+              <div class="product-card__labels">
+                <h3 class="product-card__title text-white">Морковь мытая, 1 кг</h3>
+                <span class="product-card__label product-card__label--hit product-card__label--hit--wibe">Хит</span>
+                <div class="product-card__price-container product-card__price-container--wide-two">
+                  <p class="product-card__price product-card__price--wide-two">140 ₽</p>
+                  <button class="button button--wide">Оставить заявку</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Стандартная карточка 1: Попкорн солёный -->
+        <div class="product-card product-card--standard">
+          <div class="product-card__image-wrapper">
+            <img src="images/products/popcorn.jpeg" alt="Попкорн солёный, для СВЧ-печи, 120 г"
+              class="product-card__image product-card__image--standard" />
+            <div class="product-card__labels">
+              <span class="product-card__label product-card__label--discount">-29%</span>
+              <span class="product-card__label product-card__label--day">Товар дня</span>
+            </div>
+          </div>
+          <h3 class="product-card__title">Попкорн солёный, для СВЧ-печи, 120 г</h3>
+          <p class="product-card__price">160 ₽</p>
+        </div>
+
+        <!-- Стандартная карточка 2: Эскимо с малиной -->
+        <div class="product-card product-card--standard">
+          <div class="product-card__image-wrapper">
+            <img src="images/products/iceCream.jpeg" alt="Эскимо с малиной, 150 г"
+              class="product-card__image product-card__image--standard" />
+            <div class="product-card__labels">
+              <span class="product-card__label product-card__label--hit product-card__label--standard">Хит</span>
+            </div>
+          </div>
+          <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
+          <p class="product-card__price">190 ₽</p>
+        </div>
+      </div>
+    </section>
 
 
-    <script type="module" src="js/main.js"></script>
+
+
+
+
+
+  </main>
+
+
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

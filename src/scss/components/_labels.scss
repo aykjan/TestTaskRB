@@ -1,0 +1,91 @@
+.product-card__label {
+    display: block;
+    padding-top: 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+
+    &-container {
+        &--full {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 359%;
+        }
+    }
+
+    // Лейблы "Discount" (Скидка)
+    &--discount {
+        height: 23px;
+        width: 55px;
+        border-radius: 50px;
+        text-align: center;
+        padding-top: 10px;
+
+        &.product-card__label--discount-full {
+            background-color: #ff4d4f; // Цвет для полной карточки
+        }
+
+        &.product-card__label--discount-wide {
+            display: block;
+            background-color: rgb(255, 91, 198); // Цвет для широкой карточки
+            width: 55px;
+            height: 23px;
+            margin-bottom: 4px;
+        }
+
+        &.product-card__label--discount-standard {
+            background-color: #ff8c8c; // Цвет для стандартной карточки
+        }
+    }
+
+    // Лейблы "Day" (Товар дня)
+    &--day {
+        &.product-card__label--day-full {
+            width: 83px;
+            height: 23px;
+            background-color: rgb(255, 167, 38); // Цвет для полной карточки
+        }
+
+        &.product-card__label--day-wide {
+            background-color: #20d67b; // Цвет для широкой карточки
+        }
+
+        &.product-card__label--day-standard {
+            background-color: #32e58e; // Цвет для стандартной карточки
+        }
+    }
+
+    // Лейблы "Hit" (Хит)
+    &--hit {
+        &.product-card__label--hit-full {
+            background-color: #915aff; // Цвет для полной карточки
+        }
+
+        &.product-card__label--hit-wide {
+            background-color: #7a4cff; // Цвет для широкой карточки
+        }
+
+        &.product-card__label--hit-standard {
+            background-color: #5a2fff; // Цвет для стандартной карточки
+        }
+    }
+
+    // Лейблы "Sale" (Распродажа)
+    &--sale {
+        height: 23px;
+        width: 75px;
+        border-radius: 50px;
+        text-align: center;
+        padding-top: 10px;
+
+        &.product-card__label--sale-wide {
+            width: 98px;
+            height: 23px;
+            
+            background-color: rgb(57, 176, 244); // Цвет для широкой карточки
+        }
+
+    }
+}

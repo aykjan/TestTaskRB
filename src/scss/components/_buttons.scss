@@ -1,0 +1,14 @@
+.button {
+    width: 142px;
+    height: 32px;
+    border-radius: 5px;
+    background: #18c576;
+    border: none;
+    color: white;
+
+    &--full {
+        position: absolute;
+        left: 114%;
+        top: 410%;
+    }
+}

@@ -1,5 +1,6 @@
 .products-section {
     display: flex;
+
     &__row {
         display: flex;
         justify-content: space-between;
@@ -16,6 +17,7 @@
     &--full {
         margin-left: 120px;
     }
+
     &--wide {
         display: flex;
         flex-direction: column;
@@ -36,8 +38,23 @@
 
     &__image-wrapper {
         position: relative;
-        width: 100%;
-        height: 100%;
+        background: url(../../images/products/peas.jpeg) center center/cover no-repeat;
+        width: 387px;
+        height: 328px;
+
+        &--wide-one {
+            position: relative;
+            background: url(../../images/products/blueberry.jpeg) center center/cover no-repeat;
+            width: 387px;
+            height: 154px;
+        }
+
+        &--wide-two {
+            position: relative;
+            background: url(../../images/products/carrots.jpeg) center center/cover no-repeat;
+            width: 387px;
+            height: 154px;
+        }
     }
 
     &__image {
@@ -70,5 +87,33 @@
         font-size: 20px;
     }
 
-   
+    &__price-container--full {
+        display: flex;
+    }
+    &__price-container--wide {
+        display: flex;
+        position: absolute;
+        left: 82%;
+        top: 75%;
+    }
+
+    &__price {
+        color: white;
+
+        &.product-card__price--full {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            top: 397%;
+            left: 90%;
+        }
+        &.product-card__price--wide-one {
+            width: 57px;
+            height: 20px;
+            margin-top: 10px;
+        }
+
+
+    }
+
 }
