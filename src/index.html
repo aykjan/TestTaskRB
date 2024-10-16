@@ -15,41 +15,96 @@
         <!-- Секция видео -->
         <section class="video">
             <div class="video__wrapper">
-              <button class="video__button">
-                <span class="video__text">Смотреть видео</span>
-                <span class="video__icon">
-                  <i class="bi bi-play"></i>
-                </span>
-              </button>
-              <!-- Видео теперь внутри video__wrapper -->
-              <div class="video__player" id="video-player"></div>
+                <button class="video__button">
+                    <span class="video__text">Смотреть видео</span>
+                    <span class="video__icon">
+                        <i class="bi bi-play"></i>
+                    </span>
+                </button>
+                <!-- Видео теперь внутри video__wrapper -->
+                <div class="video__player" id="video-player"></div>
             </div>
-          </section>
-          
+        </section>
+
 
 
 
         <!-- Секция товаров -->
         <section class="products-section">
-            <div class="products-wrapper">
-                <!-- Карточка товара -->
-                <div class="product-card">
-                    <img src="product1.jpg" alt="Название продукта" class="product-image">
-                    <div class="product-labels">
-                        <span class="label label-discount">-21%</span>
-                        <span class="label label-day">Товар дня</span>
-                    </div>
-                    <h3 class="product-title">Горох в стручках, 1 кг</h3>
-                    <p class="product-price">570 ₽</p>
-                    <button class="order-button">Оставить заявку</button>
+          <!-- Контейнер для всех карточек на одной строке -->
+          <div class="products-section__row">
+            <!-- Полная карточка 1: Горох в стручках -->
+            <div class="product-card product-card--full">
+              <div class="product-card__image-wrapper">
+                <img src="images/products/peas.jpeg" alt="Горох в стручках, 1 кг" class="product-card__image" />
+                <div class="product-card__labels">
+                  <span class="product-card__label product-card__label--discount">-29%</span>
+                  <span class="product-card__label product-card__label--day">Товар дня</span>
                 </div>
-                <!-- Добавить остальные карточки аналогично -->
+              </div>
             </div>
+        
+            <!-- Контейнер для широких карточек -->
+            <div class="products-section__wide">
+              <!-- Широкая карточка 1: Голубика лесная -->
+              <div class="product-card product-card--wide">
+                <div class="product-card__image-wrapper">
+                  <img src="images/products/blueberry.jpeg" alt="Голубика лесная, 200 г" class="product-card__image" />
+                  <div class="product-card__labels">
+                    <span class="product-card__label product-card__label--discount">-31%</span>
+                    <span class="product-card__label product-card__label--sale">Распродажа</span>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Широкая карточка 2: Морковь мытая -->
+              <div class="product-card product-card--wide">
+                <div class="product-card__image-wrapper">
+                  <img src="images/products/carrots.jpeg" alt="Морковь мытая, 1 кг" class="product-card__image" />
+                  <div class="product-card__labels">
+                    <span class="product-card__label product-card__label--hit">Хит</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Стандартная карточка 1: Попкорн солёный -->
+            <div class="product-card product-card--standard">
+              <div class="product-card__image-wrapper">
+                <img src="images/products/popcorn.jpeg" alt="Попкорн солёный, для СВЧ-печи, 120 г" class="product-card__image" />
+                <div class="product-card__labels">
+                  <span class="product-card__label product-card__label--discount">-29%</span>
+                  <span class="product-card__label product-card__label--day">Товар дня</span>
+                </div>
+              </div>
+              <h3 class="product-card__title">Попкорн солёный, для СВЧ-печи, 120 г</h3>
+              <p class="product-card__price">160 ₽</p>
+            </div>
+        
+            <!-- Стандартная карточка 2: Эскимо с малиной -->
+            <div class="product-card product-card--standard">
+              <div class="product-card__image-wrapper">
+                <img src="images/products/iceCream.jpeg" alt="Эскимо с малиной, 150 г" class="product-card__image" />
+                <div class="product-card__labels">
+                  <span class="product-card__label product-card__label--hit">Хит</span>
+                </div>
+              </div>
+              <h3 class="product-card__title">Эскимо с малиной, 150 г</h3>
+              <p class="product-card__price">190 ₽</p>
+            </div>
+          </div>
         </section>
+        
+        
+        
+        
+        
+        
+        
     </main>
 
 
-<script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
