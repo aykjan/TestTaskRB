@@ -63,8 +63,10 @@
             background-color: #915aff; // Цвет для полной карточки
         }
 
-        &.product-card__label--hit-wide {
-            background-color: #7a4cff; // Цвет для широкой карточки
+        &.product-card__label--hit--wibe {
+            width: 44px;
+            height: 23px;
+            background-color: rgb(172, 89, 241); // Цвет для широкой карточки
         }
 
         &.product-card__label--hit-standard {
