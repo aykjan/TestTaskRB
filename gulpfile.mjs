@@ -12,12 +12,13 @@ import imagemin from 'gulp-imagemin';
 
 const bs = browserSync.create();
 
-// Пути к файлам
+
 const paths = {
     scss: './src/scss/**/*.scss',
     js: './src/js/**/*.js',
     images: './src/images/**/*',
-    html: './src/*.html'
+    html: './src/*.html',
+    fonts: './src/fonts/**/*'
 };
 
 // Компиляция SCSS, минификация и автопрефиксы
@@ -32,9 +33,7 @@ gulp.task('styles', function () {
         .pipe(bs.stream()); // Обновление браузера
 });
 
-// Минификация и объединение JS
-// Минификация и объединение JS
-// Минификация и сборка JS
+
 gulp.task('scripts', function () {
     return gulp.src('./src/js/main.js') // Только главный файл
         .pipe(sourcemaps.init()) // Инициализация sourcemaps
@@ -46,8 +45,8 @@ gulp.task('scripts', function () {
 
 // Копирование компонентов в папку dist
 gulp.task('copy-js-components', function () {
-    return gulp.src('./src/js/components/*.js') // Все компоненты
-        .pipe(gulp.dest('./dist/js/components')); // Копируем в dist
+    return gulp.src('./src/js/components/*.js') 
+        .pipe(gulp.dest('./dist/js/components'));
 });
 
 
@@ -59,6 +58,11 @@ gulp.task('images', function () {
         .pipe(imagemin()) // Оптимизация изображений
         .pipe(gulp.dest('./dist/images'));
 });
+
+gulp.task('fonts', function() {
+    return gulp.src(paths.fonts) 
+      .pipe(gulp.dest('dist/fonts')); 
+  });
 
 // Копирование HTML
 gulp.task('html', function () {
@@ -90,5 +94,5 @@ gulp.task('serve', function () {
 });
 
 // Задача по умолчанию (стартовая)
-gulp.task('default', gulp.series('styles', 'scripts', 'copy-js-components', 'images', 'html', 'serve'));
+gulp.task('default', gulp.series('styles', 'scripts', 'copy-js-components', 'images', 'fonts', 'html', 'serve'));
 
