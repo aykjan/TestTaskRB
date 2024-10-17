@@ -82,7 +82,7 @@
         flex-direction: column;
         gap: 5px;
 
-        &--wide-two {
+        &--wide {
             position: absolute;
             bottom: 12px;
             left: 12px;
@@ -101,13 +101,13 @@
         position: absolute;
         left: 82%;
         top: 75%;
-        &-two {
+         
             display: flex;
            position: absolute;
            left: 50%;
            top: 70%;
 
-        }
+        
     }
 
     &__text-container {
