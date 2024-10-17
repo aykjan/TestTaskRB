@@ -36,42 +36,31 @@
         }
 
         &.product-card__label--discount-standard {
-            background-color: #ff8c8c; // Цвет для стандартной карточки
+            background-color: rgb(24, 197, 118); // Цвет для стандартной карточки
         }
     }
 
     // Лейблы "Day" (Товар дня)
     &--day {
-        &.product-card__label--day-full {
+        &.product-card__label--day {
             width: 83px;
             height: 23px;
             background-color: rgb(255, 167, 38); // Цвет для полной карточки
         }
 
-        &.product-card__label--day-wide {
-            background-color: #20d67b; // Цвет для широкой карточки
-        }
 
-        &.product-card__label--day-standard {
-            background-color: #32e58e; // Цвет для стандартной карточки
-        }
+       
     }
 
     // Лейблы "Hit" (Хит)
     &--hit {
-        &.product-card__label--hit-full {
-            background-color: #915aff; // Цвет для полной карточки
-        }
-
-        &.product-card__label--hit--wibe {
+        &.product-card__label--hit {
             width: 44px;
             height: 23px;
             background-color: rgb(172, 89, 241); // Цвет для широкой карточки
         }
 
-        &.product-card__label--hit-standard {
-            background-color: #5a2fff; // Цвет для стандартной карточки
-        }
+       
     }
 
     // Лейблы "Sale" (Распродажа)
