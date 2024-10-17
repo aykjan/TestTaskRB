@@ -84,7 +84,7 @@ gulp.task('serve', function () {
                 next();
             }
         },
-        https: true  // Включаем HTTPS
+         // Включаем HTTPS
     });
 
     gulp.watch(paths.scss, gulp.series('styles'));
