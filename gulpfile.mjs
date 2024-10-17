@@ -89,6 +89,7 @@ gulp.task('serve', function () {
 
     gulp.watch(paths.scss, gulp.series('styles'));
     gulp.watch(paths.js, gulp.series('scripts'));
+    gulp.watch('./src/js/components/*.js', gulp.series('copy-js-components'))
     gulp.watch(paths.images, gulp.series('images'));
     gulp.watch(paths.html, gulp.series('html'));
 });

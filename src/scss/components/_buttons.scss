@@ -11,12 +11,22 @@
         left: 114%;
         top: 410%;
     }
+
     &--wide {
         margin-left: 8px;
     }
+
     &--standart {
         width: 160px;
         height: 32px;
         margin-bottom: 12px;
+    }
+
+    &--modal {
+        position: absolute;
+        right: 13px;
+        width: 106px;
+        height: 32px;
+        bottom: 12px;
     }
 }
