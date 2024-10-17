@@ -108,6 +108,9 @@
 
     &__text-container {
         margin-left: 12px;
+        &--full {
+            position: absolute;
+        }
     }
 
     &__price {
