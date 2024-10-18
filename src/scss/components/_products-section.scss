@@ -1,6 +1,10 @@
 .products-section {
     display: flex;
 
+    &--tablet {
+        display: none;
+    }
+
     &__row {
         display: flex;
         justify-content: space-between;
