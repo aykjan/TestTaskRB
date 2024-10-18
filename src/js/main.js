@@ -1,5 +1,6 @@
 import initVideoPlayer from './components/videoPlayer.js';
 import Modal from './components/modal.js';
+import sliderModule from './components/sliderModule.js';
 
 // Инициализация видео-плеера
 initVideoPlayer('https://www.youtube.com/embed/zyI3hAXTgFc?si=ZgoRmTSLAEuJzWnw');
@@ -16,4 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         Modal.open(); // Открываем модальное окно при клике
       });
     });
+
+    sliderModule.init();
 });

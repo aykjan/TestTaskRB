@@ -93,4 +93,136 @@
         flex-direction: column;
     }
 
+    .products-slider {
+        display: block;
+        overflow: hidden;
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    .products-slider__container {
+        display: flex;
+        transition: transform 0.3s ease;
+        /* Плавная анимация для слайда */
+        will-change: transform;
+    }
+
+    /* Стили для карточек с модификатором --slider */
+    .product-card--slider {
+        display: block;
+        min-width: 230px;
+        height: 410px;
+        margin-right: 16px;
+        /* Отступ между карточками */
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        padding: 0;
+
+        &.inactive {
+            opacity: 0.5; // Прозрачность для неактивных карточек
+        }
+    }
+
+    .product-card__image-wrapper--slider {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .product-card__image--slider {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card__labels--slider {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-card__label--slider {
+        background-color: #ff6a00;
+        color: #fff;
+        font-size: 12px;
+        padding: 3px 6px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+    .product-card__title--slider {
+        width: 200px;
+        height: 25px;
+        font-size: 16px;
+        margin: 0;
+        margin-left: 15px;
+    }
+
+    .product-card__price-container--slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        margin-top: 68px;
+    }
+
+    .product-card__price--slider {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .button--slider {
+        width: 200px;
+        height: 40px;
+        margin: 0;
+        background-color: #18c576;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+
+    .icon-container--slider {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .slider-dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .slider-dot.active {
+        background-color: #000; // Цвет активной доты
+    }
+
+
+
+
 }
