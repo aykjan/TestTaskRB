@@ -26,11 +26,12 @@
 
     &__title {
         margin: 0;
+        color: rgb(68, 68, 68);
     }
 
     &__content {
         width: 387px;
-        height: 223px;
+        height: 200px;
         background-color: #fff;
         padding: 20px;
         border-radius: 8px;
@@ -45,12 +46,15 @@
         margin-top: 24px;
         padding-left: 12px;
         border-radius: 5px; 
+        box-shadow: none; 
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+
     }
 
     &__consent-label {
-        position: absolute;
-        bottom: 20px;
-        left: 12px;
+        display: block;
+        margin-bottom: -7px
     }
     &__consent-text {
         font-size: 8px;
@@ -65,11 +69,19 @@
 
     &__close {
         position: absolute;
-        top: 10px;
-        right: 10px;
+        width: 10px;
+        height: 10px;
+        top: 8px;
+        right: 30px;
         background: none;
         border: none;
-        font-size: 1.5rem;
+        font-size: 1.9rem;
         cursor: pointer;
     }
+}
+
+.error-message {
+    color: rgb(228, 75, 75);
+    font-size: 8px;
+    margin-top: 5px;
 }
