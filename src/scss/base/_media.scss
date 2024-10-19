@@ -83,12 +83,21 @@
     .video {
         margin-bottom: 48px;
         min-height: 0;
+        padding: 0;
     }
 
     .video__wrapper {
         width: 100%;
         /* Исправляем на 100%, чтобы контент заполнил весь контейнер */
         height: 204px;
+    }
+
+    .products-section {
+        display: block;
+    }
+
+    .products-section--tablet {
+        display: none;
     }
 
     .products-section__row {
@@ -164,6 +173,7 @@
     .product-card__price.product-card__price--wide-two {
         margin: 0;
         margin-left: 100px;
+        margin-bottom: -8px;
     }
 
     .product-card__price-container {
@@ -191,7 +201,7 @@
     /* Стили для карточек с модификатором --slider */
     .product-card--slider {
         display: block;
-        min-width: 230px;
+        min-width: 250px;
         height: 410px;
         margin-right: 16px;
         /* Отступ между карточками */
@@ -202,6 +212,8 @@
         transition: opacity 0.3s ease;
         opacity: 1;
         padding: 0;
+        margin: 0;
+        margin-left: 28px;
 
         &.inactive {
             opacity: 0.5; // Прозрачность для неактивных карточек
@@ -210,7 +222,6 @@
 
     .product-card__image-wrapper--slider {
         position: relative;
-        border-radius: 10px;
         overflow: hidden;
     }
 
@@ -234,6 +245,34 @@
         padding: 3px 6px;
         border-radius: 5px;
         margin-bottom: 5px;
+    }
+
+    .product-card__label--discount {
+        height: 20px;
+        width: 65px;
+        padding-top: 7px;
+    }
+
+    .product-card__labels--wide.product-card__labels--wide--full {
+        top: 60px;
+    }
+
+    .product-card__label--discount.product-card__label--discount-wide {
+        margin-right: 4px;
+    }
+
+    .product-card__label--discount.product-card__label--discount-full {
+        margin-right: 4px;
+    }
+
+    .product-card__label--day.product-card__label--day {
+        width: 90px;
+        margin-top: -3px;
+    }
+
+    .product-card__label--sale.product-card__label--sale-wide {
+        width: 104px;
+        margin-top: -1px;
     }
 
     .product-card__title--slider {
@@ -314,6 +353,7 @@
     .product-card__label.product-card__label--discount.product-card__label--discount-standard.product-card__label--slider {
         height: 18px;
         width: 51px;
+        margin-left: 4px;
         border-radius: 50px;
         padding-top: 5px;
     }
