@@ -31,6 +31,8 @@
     }
 
     .product-card.product-card--full.product-card--tablet {
+        width: 382px;
+        height: 328px;
         margin-left: 57px;
     }
 
@@ -49,9 +51,9 @@
     }
 
     .button.button--standart.button--standart--tablet {
-        width: 141px;
+        width: 157px;
         height: 32px;
-        margin-right: 23px;
+        margin-right: 12px;
     }
 
     .product-card__price-container--standart.product-card__price-container--standart--tablet {
@@ -64,8 +66,15 @@
         margin-bottom: 8px;
     }
 
-    .product-card__image-wrapper--wide-two.product-card__image-wrapper--wide-two--tabel {
-        width: 350px;
+
+
+    .button.button--wide.button--wide--tablet {
+        margin-left: 9px;
+        margin-right: 18px;
+    } 
+
+    .product-card--full {
+        margin: 0;
     }
 
 }
