@@ -87,7 +87,7 @@
     }
 
     .video__wrapper {
-        width: 100%;
+        width: 328px;
         /* Исправляем на 100%, чтобы контент заполнил весь контейнер */
         height: 204px;
     }
@@ -112,6 +112,10 @@
         width: 100%;
         /* Чтобы карточка занимала всю ширину */
         max-width: none;
+        &:hover {
+            box-shadow: none;
+            transform: none;
+        }
     }
 
     .product-card--full,
@@ -133,24 +137,74 @@
         margin-top: 14px;
         width: 296px;
         height: 32px;
-        margin-left: -28px;
         margin-bottom: 14px;
+        &:hover {
+            transform: none;
+        }
     }
 
-    // Временно скрываем стандартные карточки
+    .button--wide {
+        margin-left: -40px;
+    }
+
+    .button.button--wide.button--wide--mobile {
+        margin-left: -60px;
+    }
+
+    .button.button--wide.button--wide--full {
+        margin-left: -48px;
+    }
+
+    .button.button--modal {
+        position: absolute;
+        width: 106px;
+        margin: 0;
+
+    }
+
+    .modal__content {
+        width: 100%;
+    }
+
+    .modal__close {
+        right: 0;
+        color: black;
+    }
+
+    .modal__input {
+        width: 315px;
+    }
+
+    .modal__title {
+        font-size: 15px;
+    }
+
+    .modal__form {
+        margin-top: -3px;
+    }
+
+
+    
+
+    
     .product-card--standard {
         display: none;
     }
 
-    // Горох в стручках - отображаем корректно
+    
     .product-card--full {
-        width: 100%;
         display: block !important;
+        width: 328px;
+        height: 328px;  
         margin: 0;
+        &:hover {
+            box-shadow: none;
+            transform: none;
+        }
     }
 
     .product-card--wide {
-        width: 100%;
+        width: 328px;
         height: 175px;
     }
 
@@ -159,6 +213,11 @@
         top: 53px;
         left: 12px;
         display: flex;
+    }
+
+
+    .product-card__image-wrapper:hover {
+        height: 328px;
     }
 
     .product-card__image-wrapper--wide-one {
@@ -172,8 +231,12 @@
 
     .product-card__price.product-card__price--wide-two {
         margin: 0;
-        margin-left: 100px;
+        margin-left: 70px;
         margin-bottom: -8px;
+    }
+
+    .product-card__price.product-card__price--wide-two.product-card__price--wide-two--mobile {
+        margin-left: 85px;
     }
 
     .product-card__price-container {
@@ -273,6 +336,10 @@
     .product-card__label--sale.product-card__label--sale-wide {
         width: 104px;
         margin-top: -1px;
+    }
+
+    .icon-container.icon-container--mobile {
+        right: 70px;
     }
 
     .product-card__title--slider {

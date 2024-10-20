@@ -21,5 +21,10 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.79.5"
-  }
+  },
+
+  "browserslist": [
+		"> 1%",
+		"not dead"
+	]
 }
