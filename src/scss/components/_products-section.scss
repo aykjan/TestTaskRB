@@ -9,7 +9,7 @@
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        /* Отступы между карточками */
+        
     }
 }
 
@@ -18,13 +18,13 @@
     overflow: hidden;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     &:hover {
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Добавление тени при наведении
-        transform: translateY(-10px); // Легкий подъем карточки
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transform: translateY(-10px); 
       }
 
 
     &--full {
-        margin-left: 120px;
+        margin-left: 158px;
     }
 
     &--wide {
@@ -82,7 +82,6 @@
 
         &--full {
             width: 387px;
-            /* Исправленный размер для полной карточки */
             height: 328px;
         }
 
