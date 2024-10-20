@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host = 'smtp.yandex.ru';  // SMTP сервер Yandex
         $mail->SMTPAuth = true;
         $mail->Username = 'arzumanyan.aik@yandex.ru';  // Замените на ваш email на Yandex
-        $mail->Password = 'unggzgbzljrymbrr';  // Замените на ваш пароль
+        $mail->Password = '';  // Замените на ваш пароль
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
