@@ -16,6 +16,11 @@
 .product-card {
     border-radius: 5px;
     overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); // Добавление тени при наведении
+        transform: translateY(-10px); // Легкий подъем карточки
+      }
 
 
     &--full {
@@ -45,6 +50,9 @@
         background: url(../../images/products/peas.jpeg) center center/cover no-repeat;
         width: 387px;
         height: 328px;
+        &:hover {
+            height: 348px;
+        }
         
         
         &--standart {
@@ -178,4 +186,11 @@
     position: absolute;
     right: 14px;
     top: 14px;
+    i {
+        transition: color 0.3s ease, transform 0.3s ease;
+        &:hover {
+            color: #ffeb3b; 
+            transform: rotate(20deg);
+        }
+    }
 }

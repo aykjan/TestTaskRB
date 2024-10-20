@@ -5,6 +5,11 @@
     background: #18c576;
     border: none;
     color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    &:hover {
+        background-color: #ff6f91; 
+        transform: scale(1.05);
+      }
 
     &--full {
         position: absolute;
