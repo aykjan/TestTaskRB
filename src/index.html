@@ -348,30 +348,29 @@
   </main>
 
 
-<div class="modal" id="modalForm">
-  <div class="modal__overlay"></div>
-  <div class="modal__content">
-    <button class="modal__close">&times;</button>
-    <h2 class="modal__title">Оставьте заявку</h2>
-    <form action="#" class="modal__form">
-      <div class="modal__form-group">
-        
-        <input type="text" id="name" class="modal__input" placeholder="Ваше имя *">
-      </div>
-      <div class="modal__form-group">
-        
-        <input type="tel" id="phone" class="modal__input" placeholder="Номер телефона*">
-      </div>
-      <div class="modal__form-group">
-        <label class="modal__consent-label">
-          <input type="checkbox" class="modal__consent-checkbox">
-          <span class="modal__consent-text">Я соглашаюсь на обработку персональных данных</span>
-        </label>
-      </div>
-      <button type="submit" class="button button--modal">Отправить</button>
-    </form>
+  <div class="modal" id="modalForm">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button class="modal__close">&times;</button>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <form action="#" class="modal__form">
+        <div class="modal__form-group">
+          <input type="text" id="name" name="name" class="modal__input" placeholder="Ваше имя *">
+        </div>
+        <div class="modal__form-group">
+          <input type="tel" id="phone" name="phone" class="modal__input" placeholder="Номер телефона *">
+        </div>
+        <div class="modal__form-group">
+          <label class="modal__consent-label">
+            <input type="checkbox"  class="modal__consent-checkbox">
+            <span class="modal__consent-text">Я соглашаюсь на обработку персональных данных</span>
+          </label>
+        </div>
+        <button type="submit" class="button button--modal">Отправить</button>
+      </form>
+    </div>
   </div>
-</div>
+  
 
 
 

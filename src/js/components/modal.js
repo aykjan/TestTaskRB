@@ -6,8 +6,8 @@ const Modal = (() => {
   const submitButton = form.querySelector('.button--modal');
   const phoneInput = modal.querySelector('#phone');
   const nameInput = modal.querySelector('#name');
-  const checkbox = modal.querySelector('.modal__consent-checkbox'); 
-  const checkboxLabel = modal.querySelector('.modal__consent-label'); 
+  const checkbox = modal.querySelector('.modal__consent-checkbox'); // Чекбокс
+  const checkboxLabel = modal.querySelector('.modal__consent-label'); // Лейбл для чекбокса
 
   const open = () => {
     modal.classList.add('modal--open');
@@ -23,7 +23,7 @@ const Modal = (() => {
   const applyPhoneMask = () => {
     phoneInput.addEventListener('input', function (e) {
       let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,4})/);
-      if (x && x[0].length <= 11) { 
+      if (x && x[0].length <= 11) { // Ограничиваем ввод до 11 цифр
         e.target.value = x[1] ? `+7 (${x[2]}` + (x[3] ? `) ${x[3]}` : '') + (x[4] ? `-${x[4]}` : '') : '';
       }
     });
@@ -34,7 +34,7 @@ const Modal = (() => {
     const parent = input.parentElement;
     let errorMessage = parent.querySelector('.error-message');
 
-    if (message) {
+    if (message) { // Если есть сообщение, показываем ошибку
       input.style.border = '1px solid red';
       if (!errorMessage) {
         errorMessage = document.createElement('span');
@@ -44,7 +44,7 @@ const Modal = (() => {
       } else {
         errorMessage.textContent = message; // Обновляем текст ошибки, если сообщение уже есть
       }
-    } else {
+    } else { // Убираем ошибку, если она исправлена
       input.style.border = '1px solid rgba(0, 0, 0, 0.1)';
       if (errorMessage) {
         errorMessage.remove();
@@ -121,6 +121,8 @@ const Modal = (() => {
     // Изменение состояния кнопки отправки
     submitButton.disabled = !isValid;
     submitButton.style.backgroundColor = isValid ? '#18c576' : 'rgba(144, 238, 144, 0.5)';
+
+    return isValid;
   };
 
   const addEventListeners = () => {
@@ -134,13 +136,28 @@ const Modal = (() => {
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      validateForm();
+      if (validateForm()) {
+        // Собираем данные для отправки
+        const formData = new FormData(form);
 
-      if (!submitButton.disabled) {
-        // Действия при успешной валидации
-        alert('Форма отправлена!');
-        form.reset(); // Сбрасываем форму после отправки
-        clearErrors(); // Очищаем ошибки и стили полей
+        // Отправка данных на сервер через fetch
+        fetch('mail.php', {
+          method: 'POST',
+          body: formData
+        })
+          .then(response => response.text())
+          .then(result => {
+            if (result === 'success') {
+              alert('Форма успешно отправлена!');
+              form.reset();
+              clearErrors(); 
+            } else {
+              alert('Ошибка при отправке формы: ' + result);
+            }
+          })
+          .catch(error => {
+            alert('Ошибка при отправке формы: ' + error);
+          });
       }
     });
   };
