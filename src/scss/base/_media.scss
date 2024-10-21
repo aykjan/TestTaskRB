@@ -67,6 +67,19 @@
     }
 
 
+    .product-card__image-wrapper--wide-two {
+        width: 335px;
+    }
+
+    .icon-container.icon-container--tablet {
+        right: 50px;
+    }
+
+    .icon-container.icon-container--tablet.icon-container--tablet--standart {
+        right: 25px;
+    }
+
+
 
     .button.button--wide.button--wide--tablet {
         margin-left: 9px;
@@ -336,6 +349,10 @@
     .product-card__label--sale.product-card__label--sale-wide {
         width: 104px;
         margin-top: -1px;
+    }
+
+    .icon-container.icon-container--mobile.icon-container--mobile--two {
+        right: 20px;
     }
 
     .icon-container.icon-container--mobile {
